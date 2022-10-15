@@ -13,7 +13,9 @@ contract SimpleStorage {
     }
     //array
     People[] public people;
-    function store(uint256 _favoriteNumber) public {
+
+    //storage function set to virtual in order to be inherited and overriden in a seperate contract
+    function store(uint256 _favoriteNumber) public virtual {
         favoriteNumber = _favoriteNumber;
     }
     //view: reads state without spending gas unless called within another function (does not modify state)
